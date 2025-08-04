@@ -1,40 +1,41 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 20px;
+font-family: Arial, sans-serif;
+text-align: center;
+background-color: #f9f9f9;
+margin: 0;
+padding: 20px;
 }
 h1 {
-  color: #333;
+color: #333;
 }
 video {
-  width: 100%;
-  max-width: 400px;
-  border: 2px solid #444;
-  border-radius: 8px;
-  margin-top: 20px;
+width: 100%;
+max-width: 320px;
+aspect-ratio: 3/4;
+border: 2px solid #444;
+border-radius: 8px;
+margin-top: 20px;
 }
 #result {
-  margin-top: 20px;
-  font-size: 1.2em;
-  color: #006400;
+margin-top: 20px;
+font-size: 1.2em;
+color: #006400;
 }
 #history {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
+list-style: none;
+padding: 0;
+margin-top: 20px;
 }
 #history li {
-  background: #fff;
-  margin: 5px auto;
-  padding: 10px;
-  max-width: 400px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+background: #fff;
+margin: 5px auto;
+padding: 10px;
+max-width: 320px;
+border: 1px solid #ccc;
+border-radius: 5px;
 }
 .share-btn {
-  margin-left: 10px;
-  padding: 5px 10px;
-  font-size: 0.9em;
+margin-left: 10px;
+padding: 5px 10px;
+font-size: 0.9em;
 }

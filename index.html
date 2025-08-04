@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Scanner de Code-Barres</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Scanner de Code-Barres</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Scanner un Code-Barres</h1>
-  <video id="video" autoplay></video>
-  <p id="result">En attente de scan...</p>
-  <ul id="history"></ul>
-
-  <!-- Librairie ZXing -->
-  <script src="https://unpkg.com/@zxing/library@latest"></script>
-  <script src="app.js"></script>
+    <h1>Scanner de Code-Barres</h1>
+    <video id="video" autoplay></video>
+    <div id="result">En attente de scan...</div>
+    <ul id="history"></ul>
+    <script src="https://unpkg.com/@zxing/library@latest"></script>
+    <script src="app.js"></script>
 </body>
 </html>
