@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style 1.css" />
   <!-- ZXing (lecture codes-barres/QR) -->
-  <script defer src="https://unpkg.com/@zxing/library@latest"></script>
+  <script src="https://unpkg.com/@zxing/library@latest"></script>
   <script defer src="app 1.js"></script>
 </head>
 <body>
@@ -66,7 +66,7 @@
           <div class="scanline" aria-hidden="true"></div>
         </div>
       </div>
-      <p id="status" role="status" aria-live="polite">Prêt. Clique « Démarrer ».</p>
+      <p id="status" role="status" aria-live="polite">Préparation…</p>
     </section>
 
     <section class="result" aria-label="Dernier résultat">
@@ -91,9 +91,9 @@
     <details class="help">
       <summary>Aide & Conseils</summary>
       <ul>
-        <li>Pour de meilleurs résultats, place le code au centre du cadre.</li>
+        <li>Place le code au centre du cadre pour de meilleurs résultats.</li>
         <li>La torche n’est pas disponible sur tous les appareils.</li>
-        <li>L’ouverture d’URL demande confirmation (sécurité).</li>
+        <li>Si l’app ne voit aucune caméra, vérifie les permissions du navigateur.</li>
       </ul>
     </details>
   </main>
