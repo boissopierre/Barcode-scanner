@@ -1,16 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <title>Barcode & QR code scanner</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <title>Scanner de code‑barres</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style 1.css" />
+  <!-- ZXing (lecture codes-barres/QR) -->
+  https://unpkg.com/@zxing/library@latest
+  <script defer src="app 1.js"></script>
 </head>
 <body>
-    <h2>Barcode & QR code scanner</h2>
-    <video id="video" autoplay></video>
-    <div id="result">En attente de scan...</div>
-    <ul id="history"></ul>
-    <script src="https://unpkg.com/@zxing/library@latest"></script>
-    <script src="app.js"></script>
+  <header class="app-header" role="banner">
+    <h1>Scanner de code‑barres</h1>
+    <p class="subtitle">Autorise l’accès à la caméra pour commencer le scan.</p>
+  </header>
+
+  <main class="container" role="main">
+    <section class="controls" aria-label="Contrôles de la caméra">
+      <label for="cameraSelect" class="sr-only">Caméra</label>
+      <select id="cameraSelect" title="Sélection de la caméra"></select>
+
+      <button id="startBtn" class="btn primary" aria-pressed="false">Démarrer</button>
+      <button id="pauseBtn" class="btn" disabled>Pause</button>
+      <button id="stopBtn" class="btn" disabled>Arrêter</button>
+      <button id="torchBtn" class="btn" disabled>Torche</button>
+
+      <label class="toggle">
+        <input type="checkbox" id="soundToggle" checked />
+        <span>Son</span>
+      </label>
+      <label class="toggle">
+        <input type="checkbox" id="vibrateToggle" checked />
+        <span>Vibration</span>
+      </label>
+    </section>
+
+    <section class="preview" aria-label="Aperçu caméra">
+      <div class="video-wrap">
+        <video id="video" playsinline muted></video>
+        <div class="overlay">
+          <div class="finder"></div>
+          <div class="scanline" aria-hidden="true"></div>
+        </div>
+      </div>
+      <p id="status" role="status" aria-live="polite">En attente de démarrage…</p>
+    </section>
+
+    <section class="result" aria-label="Dernier résultat">
+      <h2>Résultat</h2>
+      <output id="result" for="video">—</output>
+      <div class="result-actions">
+        <button id="copyBtn" class="btn" disabled>Copier</button>
+        <button id="openBtn" class="btn" disabled>Ouvrir</button>
+        <button id="shareBtn" class="btn" disabled>Partager</button>
+      </div>
+    </section>
+
+    <section class="history" aria-label="Historique des scans">
+      <h2>Historique</h2>
+      <ul id="history" aria-live="polite" aria-relevant="additions"></ul>
+      <div class="history-actions">
+        <button id="exportBtn" class="btn">Exporter CSV</button>
+        <button id="clearBtn" class="btn">Effacer</button>
+      </div>
+    </section>
+
+    <details class="help">
+      <summary>Aide & Conseils</summary>
+      <ul>
+        <li>Pour de meilleurs résultats, place le code au centre du cadre.</li>
+        <li>La torche n’est pas disponible sur tous les appareils.</li>
+        <li>L’ouverture d’URL demande confirmation (sécurité).</li>
+        <li>HTTPS requis pour l’accès à la caméra (sauf en local).</li>
+      </ul>
+    </details>
+  </main>
+
+  <footer class="app-footer" role="contentinfo">
+    <small>© 2025 – Scanner de code‑barres</small>
+  </footer>
 </body>
 </html>
